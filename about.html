@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="my_styling.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+        aside, figure, p, img h1{
+            animation: slideInUp 1.2s linear;
+        }
+
+        @keyframes slideInUp {
+            from {
+            transform: translateY(100%);
+            }
+        
+            to {
+            transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+    <body id="bd">
+        <nav>
+            <ul id="name">
+                <li>
+                    <a href="./index.html">
+                        <img id="iconImg" src="img/developer.png" alt="developer icon">
+                        <span id="nameText">Sami Nachwati</span>
+                    </a>
+                </li>  
+            </ul>
+            <ul id="items">
+                <li>
+                    <a href="./about.html">About</a>
+                </li>
+                <li>
+                    <a href="./projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="./resume.html">Resume</a>
+                </li>
+                <li>
+                    <a href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <aside id="aboutSection">
+                <h1>
+                    Sami Nachwati
+                </h1>
+                <img id="me" src="img/me.jpg" alt="picture of myself">
+                <p>
+                    Hi there! My name is Sami Nachwati.
+                    I am a Software Developer who has a deep passion for creating,
+                    building, and sustaining code.
+                    In my first year, I have developed several diverse skills, alongside with
+                    enhancing my network with many professionals and academic students. 
+                    Overall, I am proud of my recent academic achievments and where I have
+                    come to now.
+                </p>
+            </aside>
+            <aside id="Education">
+                <h1>
+                    Education
+                </h1>
+                <ul>
+                    <li class="firstItems">
+                        <strong>
+                        Major
+                        </strong> 
+                        <ul>
+                            <li class="secondItems" id="schoolProgram">
+                                <a href="https://www.mohawkcollege.ca/programs/technology/computer-systems-technology-software-development-559">
+                                    Computer Systems Technology - Software Development
+                                </a>
+                            </li>
+                            <li class="secondItems">
+                                3 Year Program
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="firstItems">
+                        <strong>College</strong>
+                        <ul>
+                            <li class="secondItems">
+                                Mohawk College of Applied Arts and Technology
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="firstItems">
+                        <strong>GPA</strong>
+                        <ul>
+                            <li class="secondItems">
+                                87.56
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="firstItems">
+                        <strong>Year</strong>
+                        <ul>
+                            <li class="secondItems">
+                                2022 - present
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+            <aside id="skills">
+                <section class="skillContainer">
+                    <h1>
+                        Back end skills
+                    </h1>
+                    <aside class="innerContainer">
+                        <figure>
+                            <p>
+                                Java
+                            </p>
+                            <img class="skillImgs" src="img/java.png" alt="Java">
+                        </figure>
+                        <figure>
+                            <p>
+                                Python
+                            </p>
+                            <img class="skillImgs" src="img/python.png" alt="Python">
+                        </figure>
+                    </aside>
+                </section>
+                <section class="skillContainer">
+                    <h1>Front end skills</h1>
+                    <aside class="innerContainer">
+                        <figure>
+                            <p> 
+                                HTML
+                            </p>
+                            <img class="skillImgs" src="img/html.png" alt="HTML">
+                        </figure>
+                        <figure>
+                            <p>
+                                CSS
+                            </p>
+                            <img class="skillImgs" src="img/css.png" alt="CSS">
+                        </figure>
+                        <figure>
+                            <p>
+                                JavaScript
+                            </p>
+                            <img class="skillImgs" src="img/JavaScript.png" alt="JavaScript">
+                        </figure>
+                        <figure>
+                            <p>
+                                Bootstrap
+                            </p>
+                            <img class="skillImgs" src="img/bootstrap.png" alt="Bootstrap">
+                        </figure>
+                    </aside>
+                </section>
+                <section class="skillContainer">
+                    <h1>
+                        Other skills
+                    </h1>
+                    <aside class="innerContainer">
+                        <figure>
+                            <p>
+                                JSON
+                            </p>
+                            <img class="skillImgs" src="img/json.png" alt="JSON">
+                        </figure>
+                        <figure>
+                            <p>
+                                AJAX
+                            </p>
+                            <img class="skillImgs" src="img/ajax.png" alt="AJAX">
+                        </figure>
+                        <figure>
+                            <p>
+                                SVG
+                            </p>
+                            <img class="skillImgs" src="img/svg.png" alt="SVG">
+                        </figure>
+                    </aside>
+                </section>
+            </aside>
+        </main>
+    </body>
+</html>

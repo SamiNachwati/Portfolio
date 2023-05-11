@@ -1,0 +1,358 @@
+@charset "UTF-8";
+
+*{
+    padding: 0; 
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+body#bd{
+  background-color: #FFF7AE;
+  color: #48284A;
+}
+
+
+h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: capitalize;
+}
+
+#projects h1, #education h1 {
+    font-weight: bold;
+}
+nav {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: #48284A;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 15px;
+}
+
+
+img#iconImg{
+    width: 50px;
+    filter: invert(89%) sepia(4%) saturate(3771%) hue-rotate(32deg) brightness(118%) contrast(124%);
+}
+
+nav ul{ 
+    list-style: none;
+}
+
+
+li a {
+    text-decoration: none;
+    color: #FFF7AE;
+}
+
+li a:hover{
+    color: lightcoral;
+}
+
+#name{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#items{
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+#me {
+    width: 260px;
+    opacity: 85%;
+    object-fit: contain;
+    border-radius: 80%;
+}
+
+
+aside#aboutSection{
+    display: flex;
+    flex-flow: column wrap;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+#aboutSection h1, #skills h1, #resume h1, #contact h1 {
+    align-self: center;
+    font-weight: bold;
+}
+
+#resumePhoto {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+
+
+#aboutSection > p {
+    margin: 0 75px;
+}
+
+#skills section{
+    padding-top: 5.5em;
+}
+
+aside img.skillImgs{
+    width: 150px;
+    aspect-ratio: 3/2;
+    object-fit: fill;
+    object-fit: contain;
+}
+
+.skillContainer{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+.innerContainer{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+
+.skillContainer .innerContainer
+{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-content: center;
+}
+
+.innerContainer figure 
+{
+    border: 1px solid black;
+    background-color: cornsilk;
+}
+
+.innerContainer figure img {
+    margin-top: auto;
+    margin-bottom: 50px;
+}
+
+
+
+@media (max-width: 968px){
+    .skillContainer .innerContainer{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    #resumePhoto img 
+    {
+        width: 80%;
+    }
+}
+
+
+main {
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3em;
+    line-height: 4em;
+    font-weight: bold;
+}
+  
+  
+#t {
+    list-style: none;
+}
+  
+main ul#landingPageList {
+    list-style: none; 
+    padding-left: 100px; 
+}
+  
+main ul#landingPageList li {
+    list-style-type: lower-greek;
+}
+
+#screen{
+    background: lightgreen;
+    border-style: solid;
+}
+
+#schoolProgram a {
+    color: coral;
+}
+
+#Education h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+#Education {
+    padding-top: 50px;
+}
+
+li.firstItems{
+    list-style-type: none;
+    line-height: 70px;
+    word-wrap: break-word;
+}
+
+li.secondItems{
+    list-style-type:square;
+    word-wrap: break-word;
+}
+
+@keyframes load{
+    0%{
+        opacity: 10%;
+        box-shadow: 10px 10px 10px 10px #FFF7AE;
+    }
+    100%{
+        opacity: 100%;
+        box-shadow: 0 0 50px 50px rgb(0,0,0,0.4);
+    }
+}
+
+#displayScreen{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    transform: translateY(30px);
+}
+
+#displayScreen div{
+    display: none;
+    background: lightgreen;
+    animation: rise 1s linear forwards;
+    filter: blur(2px);
+}
+
+@keyframes rise
+{
+    0%{
+        width: 0px;
+    }
+
+    100%{
+        width: 50px;
+    }
+}
+
+#displayScreen div:nth-child(2){
+    margin: 0 30px;
+    width: 50px;
+    height: 10px;
+    transform: rotate(90deg);
+}
+
+#displayScreen div:nth-child(1)
+{
+    width: 50px;
+    height: 10px;
+    transform: rotate(40deg);
+
+}
+
+#displayScreen div:nth-child(3){
+    transform: rotate(-400deg);
+}
+
+
+span#BT{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    transform: translateY(60px);
+    background: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+
+#button{
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+}
+
+
+#projects
+{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+#projects figure img {
+    width: 60%;
+    align-self: center;
+    justify-self: center;
+}
+
+
+#projects figure {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    border: 2px solid;
+    background-color: cornsilk;
+    margin-bottom: 100px;
+    width: 40%;
+}
+
+#projects figure p a {
+    text-decoration: none;
+    color: coral;
+}
+
+
+@media (max-width: 600px){
+    #items{
+        flex-flow: column wrap;
+    }
+    li {
+        word-wrap: break-word;
+    }
+    #nameText{
+        display: block;
+    }
+    #name li:first-child{
+        text-align: center;
+    }
+    #screen{
+        width: 80%;
+    }
+
+    #projects img {
+        aspect-ratio: 3/2;
+        object-fit: contain;
+        min-width: 50px;
+
+    }
+    #projects figure:last-child img{
+        height: 70px;
+    }
+
+    #projects{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+    }
+    #projects figure, #projects > p{
+        width: 70%;
+    }
+}
+
+  
