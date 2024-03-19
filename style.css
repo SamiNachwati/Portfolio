@@ -3,8 +3,10 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: "Space Grotesk", sans-serif;
-    background-color: #07051c;
-    color: #dfd7fc;
+    /* background-color: #07051c;
+    color: #dfd7fc; */
+    background-color:black ;
+    color:#6FFFFF;
     font-weight: bolder;
 }
 
@@ -34,7 +36,8 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #dfd7fc;
+    /* color: #dfd7fc; */
+    color: #00FFFF;
 }
 
 #name {
@@ -87,7 +90,7 @@ main {
 
 .external-link i {
     font-size: 1.5em;
-    color: #dfd7fc;
+    color: #00FFFF;
 }
 
 
@@ -98,9 +101,17 @@ main {
 }
 
 
-.tools div {
+.tools div.tool-container {
     display: flex;
-    gap: 60px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.tools div.tool-container figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .tools {
@@ -116,7 +127,7 @@ main {
 }
 
 div.tools  i {
-    font-size: 4.5em;
+    font-size: 4em;
 }
 
 
@@ -130,7 +141,7 @@ div.tools  i {
     width: 196px;
     height: 110px;
     border-radius: 25px;
-    box-shadow: #dfd7fc 0px 0px 10px;
+    box-shadow: #6FFFFF 0px 0px 10px;
 }
 
 .project-item div .project-tools {
@@ -138,8 +149,8 @@ div.tools  i {
     gap: 20px;
 }
 .project-item span {
-    background-color: #dfd7fc;
-    color: #5f4b8b;
+    background-color: cyan;
+    color: black;
     padding: 10px;
     border-radius: 50px;
     
@@ -168,13 +179,13 @@ div.tools  i {
 
 #contact div i {
     font-size: 4em;
-    color: #dfd7fc;
+    color: #00FFFF;
 }
 
 
 @media (min-width: 1468px){
     nav ul li a:hover{
-        color: #5f4b8b;
+        color: white;
     }
 }
 
@@ -184,15 +195,15 @@ div.tools  i {
         position: sticky; 
         top: 0; 
         width: 100%; 
-        background: linear-gradient(#07051c, #5f4b8b);
+        background: black;
+        border-bottom: #00FFFF solid 4px;
         background-size: 400% 400%; 
         animation: moveBackground 15s ease infinite;
     }
 
 
     nav ul li a {
-        text-decoration: none;
-        color: #dfd7fc; 
+        text-decoration: none; 
         position: relative;
         display: inline-block;
         transition: color 0.3s;
@@ -261,9 +272,10 @@ div.tools  i {
 
     nav ul {
         display: flex;
-        justify-content: space-evenly;
-        flex-direction:row;
-        align-content: center;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
 
@@ -358,7 +370,7 @@ div.tools  i {
     }
 
 
-    #Tech .tools div {
+    #Tech .tools .tool-container {
         margin: 0;
         display: grid;
         grid-template-columns: auto auto;

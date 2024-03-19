@@ -9,6 +9,76 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon.min.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const typewriterText = document.getElementsByClassName('typewriter-text')[0];
+        const firstName = "Sami ";
+        const lastName = "Nachwati";
+        let index = 0;
+
+        function typeWriter() {
+            if (index < firstName.length) {
+            typewriterText.innerHTML += firstName.charAt(index);
+            index++;
+            setTimeout(typeWriter, 100);
+            } else if (index >= firstName.length && index < firstName.length + lastName.length) {
+            typewriterText.innerHTML = firstName + '<span class="highlight">' + lastName.substring(0, index - firstName.length + 1) + '</span>';
+            index++;
+            setTimeout(typeWriter, 100);
+            }
+        }
+
+        typeWriter();
+        });
+
+      </script>
+    <style>
+    #typewriter {
+        font-weight: bolder;
+        font-size: 20px;
+    }
+    .highlight {
+        color: bisque; 
+        font-style: italic;
+    }
+
+
+    .typewriter-text {
+        display: block; 
+        font-size: 20px; 
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .typewriter-text::after {
+        content: '|';
+        margin-left: 10px; 
+        color: bisque;
+        animation: blink 1s step-end infinite;
+    }
+
+
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
+
+    @media (max-width: 768px){
+        .typewriter-text {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        .typewriter-text::after {
+        content: "";
+
+        }
+    }
+
+
+    </style>
 </head>
 <body>
       
@@ -22,11 +92,10 @@
         </ul>
     </nav>
     <main>
-        <section id="about">
-            <h1>Hi there! my name is</h1>
-            <span id="name">
-                Sami Nachwati
-            </span>
+        <section id="about" onload="typeWriter()">
+            <h1 id="typewriter">Hi there! my name is
+            </h1>
+            <span class="typewriter-text" id="name"></span>
             <p>
                 I am a Software Developer that has a great passion for building innovative and creative solutions that aim to solve core problems that people face in their daily lives.
             </p>
@@ -54,32 +123,76 @@
                   </div>
                 </div>
             </div>
-              
-              
         </section>
+
+       
         <section id="Tech">
             <h1 class="header">Tech</h1>
             <div class="tools">
                 <h3>Backend:</h3>
-                <div>
+                <div class="tool-container">
 
+                    <figure>
                     <i class="fa-brands fa-python"></i>
+                    <p>Python</p>
+                    </figure>
+
+                    <figure>
                     <i class="fa-brands fa-java"></i>
+                    <p>Java</p>
+                    </figure>
+
+                    <figure>
                     <i class="fa-brands fa-php"></i>
+                    <p>Php</p>
+                    </figure>
+
+                    <figure>
                     <i class="fa-brands fa-node"></i>
+                    <p>Node.js</p>
+                    </figure>
+
+                    <figure>
                     <i class="fa-solid fa-database"></i>
+                    <p>SQL</p>
+                    </figure>
+
+                    <figure>
                     <span><i class="fa-solid fa-c"></i><i class="fa-solid fa-hashtag"></i></span>
+                    <p>C#</p>
+                    </figure>
+                
                 </div>
             </div>
 
             <div class="tools">
                 <h3>Frontend:</h3> 
-                <div>
+                <div class="tool-container">
+
+                    <figure>
                     <i class="fa-brands fa-html5"></i>
+                    <p>HTML</p>
+                    </figure>
+
+                    <figure>
                     <i class="fa-brands fa-css3-alt"></i>
+                    <p>CSS</p>
+                    </figure>
+
+                    <figure>
                     <i class="fa-brands fa-js"></i>
+                    <p>JavaScript</p>
+                    </figure>
+
+                    <figure>
                     <i class="fa-brands fa-react"></i>
+                    <p>React</p>
+                    </figure>
+
+                    <figure>
                     <i class="fa-brands fa-bootstrap"></i>
+                    <p>Bootstrap</p>
+                    </figure>
                 </div>
             </div>
         </section>
@@ -168,8 +281,8 @@
             </div>
         </section>
     </main>
-    <svg viewBox="0 30 1200 120" preserveAspectRatio="none" style="z-index: -3; position: fixed; bottom: 0; width:100%; height: 940px">
-        <path fill="#010010" id="animatedCurve" d="M0,50 Q600,0 1200,150 L1200,0 L0,0">
+    <!-- <svg viewBox="0 30 1200 120" preserveAspectRatio="none" style="z-index: -3; position: fixed; bottom: 0; width:100%; height: 940px">
+        <path fill="#421820" id="animatedCurve" d="M0,50 Q600,0 1200,150 L1200,0 L0,0">
           <animate attributeName="d" 
                    begin="0s" dur="18s" 
                    values="M0,50 Q600,0 1200,150 L1200,0 L0,0; 
@@ -177,6 +290,6 @@
                            M0,50 Q600,0 1200,150 L1200,0 L0,0" 
                    repeatCount="indefinite"/>
         </path>
-    </svg>
+    </svg> -->
 </body>
 </html>
