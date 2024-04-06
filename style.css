@@ -3,8 +3,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: "Space Grotesk", sans-serif;
-    /* background-color: #07051c;
-    color: #dfd7fc; */
     background-color:black ;
     color:#6FFFFF;
     font-weight: bolder;
@@ -18,6 +16,11 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
+}
+
+figure img {
+    width: 3em;
+    filter: hue-rotate(342deg) saturate(2);
 }
 
 
@@ -36,7 +39,6 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    /* color: #dfd7fc; */
     color: #00FFFF;
 }
 
@@ -112,6 +114,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 .tools {
@@ -122,7 +125,7 @@ main {
 
 
 #Tech {
-    margin-top: 200px;
+    margin-top: 100px;
     margin-bottom: 70px;
 }
 
@@ -133,6 +136,7 @@ div.tools  i {
 
 .header {
     font-size: 3em;
+    padding: 20px;
 }
 
 
@@ -155,6 +159,7 @@ div.tools  i {
     border-radius: 50px;
     
 }
+
 
 
 #project-container {
@@ -274,7 +279,7 @@ div.tools  i {
         display: flex;
         flex-direction: row;
         text-align: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
         flex-wrap: wrap;
     }
 
@@ -300,9 +305,8 @@ div.tools  i {
         padding: 50px 0;
     }
     #Tech div {
-        margin-top: 100px;
-        margin-bottom: 50px;
-
+        margin-top: 50px;
+        margin-bottom: 10px;
         justify-content: center;
     }
     div.tools  i {
@@ -327,6 +331,7 @@ div.tools  i {
     #project-container {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
     }
     
     #contact div {
@@ -356,8 +361,17 @@ div.tools  i {
 
 
 @media (max-width: 760px){
-    body {
-        text-align: left;
+
+    * {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+
+
+    nav ul {
+        padding: 15px;
     }
 
     section{
@@ -365,16 +379,19 @@ div.tools  i {
     }
 
 
-    #project-container .project-item div, #contact div, #Tech div {
-        justify-content: left;
+
+
+    #name{
+        font-size: 35px !important;
+        width: 100%;
     }
 
+    
 
-    #Tech .tools .tool-container {
-        margin: 0;
+    div.tool-container {
         display: grid;
         grid-template-columns: auto auto;
-        align-content: left;
+        align-content: center;
     }
 
 
@@ -382,19 +399,42 @@ div.tools  i {
         margin-bottom: 100px;
         display: flex;
         flex-direction: column;
-        align-items: left;
-        text-align: left;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
         gap: 0;
+    }
+
+
+    .project-item div {
+        justify-content: center;
+        padding: 10px;
     }
 
     #project-container .project-item div.project-tools {
         display: grid;
         grid-template-columns: auto;
+        justify-content: center;
     }
 
 
     #name {
         font-size: 3em;
+    }
+}
+
+
+@media (max-width: 500px){
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    #contact div {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
     }
 }
 
