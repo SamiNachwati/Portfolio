@@ -1,0 +1,401 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    /* background-color: #07051c;
+    color: #dfd7fc; */
+    background-color:black ;
+    color:#6FFFFF;
+    font-weight: bolder;
+}
+
+
+nav {
+    float: left;
+    padding: 180px 120px;
+    grid-column: 1;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+
+nav ul {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 75px;
+}
+
+nav ul li {
+    list-style: none;
+    transform: rotate(-90deg);
+}
+
+nav ul li a {
+    text-decoration: none;
+    /* color: #dfd7fc; */
+    color: #00FFFF;
+}
+
+#name {
+    font-size: 7em;
+}
+
+#about {
+    margin-top: 150px;
+    margin-bottom: 350px;
+}
+
+p {
+    font-size: 20px;
+}
+
+
+section {
+    min-height: 500px;
+}
+
+main {
+    margin-left: 530px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#school-logo {
+    width: 10%;
+    border-radius: 50%;
+}
+
+
+
+.timeline-container {
+    margin: 70px 0;
+}
+
+
+
+.timeline-content h3 {
+    text-decoration-line:overline;
+    text-decoration-style: solid; 
+    padding-top: 35px;  
+}
+
+
+
+
+.external-link i {
+    font-size: 1.5em;
+    color: #00FFFF;
+}
+
+
+.external-link {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+
+.tools div.tool-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.tools div.tool-container figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tools {
+    padding: 100px 0;
+}
+
+
+
+
+#Tech {
+    margin-top: 200px;
+    margin-bottom: 70px;
+}
+
+div.tools  i {
+    font-size: 4em;
+}
+
+
+.header {
+    font-size: 3em;
+}
+
+
+
+.project-item img {
+    width: 196px;
+    height: 110px;
+    border-radius: 25px;
+    box-shadow: #6FFFFF 0px 0px 10px;
+}
+
+.project-item div .project-tools {
+    display: flex;
+    gap: 20px;
+}
+.project-item span {
+    background-color: cyan;
+    color: black;
+    padding: 10px;
+    border-radius: 50px;
+    
+}
+
+
+#project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 105px;
+}
+
+
+#projects {
+    margin-bottom: 200px;
+}
+
+
+
+#contact div {
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr;
+}
+
+
+#contact div i {
+    font-size: 4em;
+    color: #00FFFF;
+}
+
+
+@media (min-width: 1468px){
+    nav ul li a:hover{
+        color: white;
+    }
+}
+
+@media (max-width: 1468px) {
+    nav {
+        padding: 0; 
+        position: sticky; 
+        top: 0; 
+        width: 100%; 
+        background: black;
+        border-bottom: #00FFFF solid 4px;
+        background-size: 400% 400%; 
+        animation: moveBackground 15s ease infinite;
+    }
+
+
+    nav ul li a {
+        text-decoration: none; 
+        position: relative;
+        display: inline-block;
+        transition: color 0.3s;
+    }
+    
+    nav ul li a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background:linear-gradient(#5f4b8b, #dfd7fc); 
+        transition: width 0.3s;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+        color: #ffffff; 
+    }
+
+    nav ul li a:hover::after,
+    nav ul li a:focus::after {
+        width: 100%;
+    }
+
+
+
+
+
+
+
+    @keyframes moveBackground {
+        0% {
+            background-position: 0% 0%;
+        }
+        50% {
+            background-position: 100% 100%;
+        }
+        100% {
+            background-position: 0% 0%;
+        }
+    }
+
+    nav ul li {
+        transform: rotate(0deg);
+    }
+
+    #name {
+        font-size: 20px;
+    }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+        justify-items: center;
+        text-align: center;
+        align-content: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+
+    main {
+        margin-left: 0;
+    }
+    #name {
+        font-size: 5em;
+    }
+    #about {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    #school-logo {
+        width: 20%;
+    }
+    .timeline-content h3 {
+        padding-top: 15px;
+    }
+    .tools {
+        padding: 50px 0;
+    }
+    #Tech div {
+        margin-top: 100px;
+        margin-bottom: 50px;
+
+        justify-content: center;
+    }
+    div.tools  i {
+        font-size: 3em;
+    }
+    .header {
+        font-size: 2em;
+    }
+
+    .project-item {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 55px;
+        text-align: left;
+    }
+
+    .project-item img {
+        justify-self: right;
+    }
+
+
+    #project-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #contact div {
+        padding-top: 40px;
+        justify-content: center;
+    }
+    #contact div i {
+        font-size: 3em;
+    }
+
+    #project-container .project-item div.project-tools {
+        display: flex;
+        text-align: center;
+        justify-content: left;
+        align-items: left;
+    }
+
+
+    section {
+        padding: 20px;
+    }
+
+
+    
+
+}
+
+
+@media (max-width: 760px){
+    body {
+        text-align: left;
+    }
+
+    section{
+        padding: 30px;
+    }
+
+
+    #project-container .project-item div, #contact div, #Tech div {
+        justify-content: left;
+    }
+
+
+    #Tech .tools .tool-container {
+        margin: 0;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-content: left;
+    }
+
+
+    .project-item {
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        text-align: left;
+        gap: 0;
+    }
+
+    #project-container .project-item div.project-tools {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+
+    #name {
+        font-size: 3em;
+    }
+}
+
+
