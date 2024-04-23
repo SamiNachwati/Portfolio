@@ -74,6 +74,14 @@ main {
 }
 
 
+img.mobile-project {
+    box-shadow: #6FFFFF 0px 0px 10px;
+    height: 390px;
+    width: 180px;
+    border-radius: 25px;
+    border: 2px solid black;
+}
+
 
 .timeline-container {
     margin: 70px 0;
@@ -82,7 +90,6 @@ main {
 
 
 .timeline-content h3 {
-    text-decoration-line:overline;
     text-decoration-style: solid; 
     padding-top: 35px;  
 }
@@ -141,7 +148,7 @@ div.tools  i {
 
 
 
-.project-item img {
+.project-item img.n-project  {
     width: 196px;
     height: 110px;
     border-radius: 25px;
@@ -175,11 +182,24 @@ div.tools  i {
 
 
 
-#contact div {
-    padding-top: 80px;
-    display: grid;
-    grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr;
+#contact #outer-contact-container {
+    width: 100%;  
+    display: flex;
+    justify-content: start;
 }
+
+
+
+
+#contact #inner-contact-container {
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 160px; 
+    flex-wrap: wrap; 
+}
+
+
 
 
 #contact div i {
@@ -188,11 +208,6 @@ div.tools  i {
 }
 
 
-@media (min-width: 1468px){
-    nav ul li a:hover{
-        color: white;
-    }
-}
 
 @media (max-width: 1468px) {
     nav {
@@ -227,6 +242,10 @@ div.tools  i {
     }
     
 
+    nav ul li a:hover{
+        color: white;
+    }
+
 
     nav ul li a:hover,
     nav ul li a:focus {
@@ -237,10 +256,6 @@ div.tools  i {
     nav ul li a:focus::after {
         width: 100%;
     }
-
-
-
-
 
 
 
@@ -333,11 +348,7 @@ div.tools  i {
         flex-direction: column;
         align-items: flex-start;
     }
-    
-    #contact div {
-        padding-top: 40px;
-        justify-content: center;
-    }
+
     #contact div i {
         font-size: 3em;
     }
@@ -355,6 +366,14 @@ div.tools  i {
     }
 
 
+    #contact #inner-contact-container {
+        gap: 50px;
+    }
+
+    #contact #outer-contact-container {
+        display: flex;
+        justify-content: center;
+    }
     
 
 }
@@ -426,15 +445,15 @@ div.tools  i {
 
 @media (max-width: 500px){
     nav ul {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: auto auto;
         gap: 10px;
         padding: 10px;
     }
 
-    #contact div {
-        display: flex;
-        gap: 20px;
+    #contact #inner-contact-container {
         flex-direction: column;
+        gap: 20px;
     }
 }
 

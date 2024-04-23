@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon.min.css">
     <script>
+
         document.addEventListener('DOMContentLoaded', function() {
         const typewriterText = document.getElementsByClassName('typewriter-text')[0];
         const firstName = "Sami ";
@@ -33,6 +34,8 @@
 
       </script>
     <style>
+     
+
     #typewriter {
         font-weight: bolder;
         font-size: 20px;
@@ -205,19 +208,60 @@
         <section id="projects">
             <h1 class="header">Projects</h1>
             <div id="project-container">
-            
+
                 <div class="project-item">
-                    <img src="petstoreimg.png" alt="">
+                    <img class="mobile-project" id="mp1" src="restaurauntapp.PNG" alt="">
+                    <div>
+                        <div class="external-link">
+                            <h3>EatsAtlas</h3>
+                            <a href="https://github.com/SamiNachwati/EatsAtlas" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                        <p>A React Native restaurant finder enhances navigation with map markers and category filters, and improves user experience through efficient search algorithms, favorites management, and social sharing features</p>
+                        <div class="project-tools">
+                            <span>React Native</span>
+                            <span>JavaScript</span>
+                            <span>Expo SDK</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="project-item">
+                    <img class="mobile-project" id="mp2" src="nebulapp.PNG" alt="">
+                    <div>
+                        <div class="external-link">
+                            <h3>NebulaExpress</h3>
+                            <a href="https://github.com/SamiNachwati/NebulaExpress" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                        <p>A React Native application integrates with a Web API to efficiently fetch and display SpaceX data, featuring advanced search capabilities to enhance user interaction and engagement.</p>
+                        <div class="project-tools">
+                            <span>React Native</span>
+                            <span>JavaScript</span>
+                            <span>Expo SDK</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="project-item">
+                    <img class="mobile-project" src="petstoreimg.png" alt="">
                     <div>
                         <div class="external-link">
                             <h3>PetSphere</h3>
-                            <a href="https://github.com/SamiNachwati/PetSphere" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://github.com/SamiNachwati/PetSphere/tree/master" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                         <p>a React-based Single Page Application that revolutionizes pet store inventory management by enabling efficient, real-time updates and significantly enhancing user and operational efficiency</p>
                         <div class="project-tools">
-                            <span>React</span>
+                            <span>React Router</span>
                             <span>HTML</span>
                             <span>CSS</span>
+                            <span>Node.js</span>
                             <span>Material UI</span>
                         </div>
                     </div>
@@ -225,41 +269,7 @@
 
 
                 <div class="project-item">
-                    <img src="northwindpage.png" alt="">
-                    <div>
-                        <div class="external-link">
-                            <h3>Northwind Traders Web Portal</h3>
-                            <a href="https://github.com/SamiNachwati/Northwind-Traders-Web-Portal" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                        <p>
-                        An ASP.NET MVC web application integrated with a RESTful API to optimize internal data management and transaction processes for Northwind Traders.</p>
-                        <div class="project-tools">
-                            <span>ASP.NET</span>
-                            <span>C#</span>
-                            <span>SQL</span>
-                            <span>HTML</span>
-                            <span>CSS</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <img src="querydataImg.png" alt="">
-                    <div>
-                        <div class="external-link">
-                            <h3>QueryRealm</h3>
-                            <a href="https://github.com/SamiNachwati/QueryRealm" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                        <p>
-                            A .NET app showcasing advanced data querying in C# and SQL through thematic exploration</p>
-                        <div class="project-tools">
-                            <span>.NET</span>
-                            <span>SQL</span>
-                            <span>C#</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <img src="weatherapiimg.png" alt="">
+                    <img class="mobile-project" src="weatherapp.png" alt="">
                     <div>
                         <div class="external-link">
                             <h3>WeatherAPI</h3>
@@ -274,8 +284,9 @@
                     </div>
                 </div>
 
+
                 <div class="project-item">
-                    <img src="raindashimg.png" alt="">
+                    <img class="mobile-project" src="raindashimg.png" alt="">
                     <div>
                         <div class="external-link">
                             <h3>RainDash</h3>
@@ -293,7 +304,7 @@
                     </div>
                 </div>
                 <div class="project-item">
-                    <img src="drawapp.png" alt="">
+                    <img class="mobile-project" src="drawapp.png" alt="">
                     <div>
                         <div class="external-link">
                             <h3>PaintApp</h3>
@@ -313,12 +324,12 @@
         <section id="contact">
             <h1 class="header">Contact</h1>
             <p>You can contact me at</p>
-            <div>
+            <div id="outer-contact-container">
+                <div id="inner-contact-container">
                 <a href="mailto:sami.nachwati@mohawkcollege.ca" ><i class="fa fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/sami-nachwati-519288264/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/SamiNachwati" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="SamiNachwatiResumeDocument.pdf" target="_blank"><i class="fas fa-file-alt"></i></a>
-  
+                </div>
             </div>
         </section>
     </main>
