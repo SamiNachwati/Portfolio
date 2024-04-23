@@ -143,7 +143,6 @@ div.tools  i {
 
 .header {
     font-size: 3em;
-    padding: 20px;
 }
 
 
@@ -158,7 +157,11 @@ div.tools  i {
 .project-item div .project-tools {
     display: flex;
     gap: 20px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
 }
+
 .project-item span {
     background-color: cyan;
     color: black;
